@@ -1,0 +1,58 @@
+<div class="container-fluid">
+  <div class="row mb-4">
+    <div class="col-md-8 d-flex flex-wrap p-3 gap-3 m-auto">
+      <fieldset class="col-12 col-md-6 text-center m-auto">
+        <legend>Range</legend>
+        <app-year-picker
+          [label]="'Min Year'"
+          [yearStart]="firstYear"
+          [yearEnd]="maxYear"
+          [yearCurr]="minYear"
+          (yearEmitter)="onChangeMinYear($event)">
+        </app-year-picker>
+        <app-year-picker
+          [label]="'Max Year'"
+          [yearStart]="minYear"
+          [yearEnd]="lastYear"
+          [yearCurr]="maxYear"
+          (yearEmitter)="onChangeMaxYear($event)">
+        </app-year-picker>
+      </fieldset>
+      <fieldset class="col-12 col-md-6 text-center m-auto">
+        <legend>Value type</legend>
+        <select
+          class="form-select mb-3"
+          name="valueType"
+          (change)="onChangeValueType($event)"
+          >
+          <option
+            value="nominal"
+            [selected]="valueType === 'nominal'"
+          >Nominal</option>
+          <option
+            value="real"
+            [selected]="valueType === 'real'"
+          >Real</option>
+        </select>
+        <dl>
+          <dt>Nominal</dt>
+          <dd>Current monetary values</dd>
+          <dt>Real</dt>
+          <dd>Values adjusted for inflation and show prices</dd>
+        </dl>
+      </fieldset>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 m-auto">
+      <app-chart-line [years]="years" [prices]="prices"></app-chart-line>
+    </div>
+  </div>
+  <div class="row p-2 text-center">
+    <a href="https://www.kaggle.com/datasets/joseserrat/yearly-gold-prices-from-1791-to-2020-in-usd">
+      Dataset source
+    </a>
+  </div>
+</div>
+
+

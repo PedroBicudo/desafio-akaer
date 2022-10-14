@@ -1,0 +1,16 @@
+<div>
+  <label for="year-picker">{{ label }}</label>
+  <div id="year-picker" class="input-group">
+    <button
+      class="btn btn-secondary"
+      (click)="onChangeYear(-1)"
+      [title]="yearStart"
+    >&lt;</button>
+    <span class="form-control">{{ yearCurr }}</span>
+    <button
+      class="btn btn-secondary"
+      (click)="onChangeYear(1)"
+      [title]="yearEnd"
+    >&gt;</button>
+  </div>
+</div>
