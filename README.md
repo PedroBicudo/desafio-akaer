@@ -18,8 +18,8 @@ pip install -r requirements.txt
 - [Exercício 3 resolvido](https://github.com/PedroBicudo/desafio-akaer/tree/main/competencia%202/ex3/ex3.sql)
 
 ### Competência 3 - HTML + CSS
-[Código fonte](https://github.com/PedroBicudo/desafio-akaer/tree/main/competencia_3/dashboard)
-[Deploy](https://desafio-akaer-pedrobicudo.netlify.app/)
+- [Código fonte](https://github.com/PedroBicudo/desafio-akaer/tree/main/competencia_3/dashboard)
+- [Deploy](https://desafio-akaer-pedrobicudo.netlify.app/)
 
 ### Competência 4 - Excel
 [Resolução](https://github.com/PedroBicudo/desafio-akaer/blob/main/competencia%204/Teste%20Excel.xlsx)
